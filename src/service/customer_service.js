@@ -70,20 +70,27 @@ exports.updateCustomer = (req, res) => {
     } else {
         query = `UPDATE customers SET name = "${name}", last_name = "${lastname}" WHERE customers.id=${id};`
     }
-    mySqlConnection.query(query, [name, lastname], (err, rows, fields) => {
-        if (!err) {
-            res.status(200).json({ message: 'Customer Updated' });
+    utils.getCustomer(id).then(customer => {
+        if (customer.length === 0) {
+            handleError.errorResponse(res, `El cliente con id ${id} no ha sido encontrado en la base de datos.`, 404, true)
+            return
         } else {
-            handleError.errorResponse(res, "Not Found", 404, true)
+            mySqlConnection.query(query, [name, lastname], (err, rows, fields) => {
+                if (!err) {
+                    res.status(200).json({ message: 'Customer Updated' });
+                } else {
+                    handleError.errorResponse(res, "Not Found", 404, true)
+                }
+            });
         }
-    });
+    })
 }
 
 exports.insertAvailableCredit = (req, res) => {
     const { available_customer_credit } = req.body;
     const { customer_id } = req.params
     const query = `INSERT INTO available_credit (available_customer_credit, customer_id) values ("${available_customer_credit}", "${customer_id}");`;
-    utils.getCustomer(customer_id), then(customer => {
+    utils.getCustomer(customer_id).then(customer => {
         if (customer.length === 0) {
             handleError.errorResponse(res, `El cliente con id ${customer_id} no ha sido encontrado en la base de datos.`, 404, true)
             return
@@ -106,3 +113,41 @@ exports.insertAvailableCredit = (req, res) => {
     })
 }
 
+exports.updateAvailableCredit = (req, res) => {
+    const { available_customer_credit } = req.body;
+    const { customer_id } = req.params
+    let query =`UPDATE available_credit SET available_customer_credit = "${available_customer_credit}" WHERE customers.id=${customer_id};`;
+    utils.getCustomerCredit(customer_id), then(customerCredit => {
+        if (customerCredit.length === 0) {
+            handleError.errorResponse(res, `El cliente con id ${customer_id} no ha sido encontrado en la base de datos.`, 404, true)
+            return
+        } else {
+            mySqlConnection.query(query, [available_customer_credit], (err, rows, fields) => {
+                if (!err) {
+                    res.status(200).json({ message: 'Available customer credit Updated' });
+                } else {
+                    handleError.errorResponse(res, "Not Found", 404, true)
+                }
+            });
+        }
+    })
+    
+}
+
+exports.getAllCustomersSortedByAvailableCredit = (req, res) => {
+    const query = 
+    `SELECT available_credit.available_customer_credit as "Available credit", customers.name as "Name", customers.last_name as "Last Name" 
+    FROM available_credit 
+    INNER JOIN customers ON available_credit.customer_id = customers.id
+    ORDER BY available_customer_credit desc;`;
+
+    mySqlConnection.query(query, (err, rows, fields) => {
+        if (!err) {
+            rows.length > 0 ? res.status(200).json(rows) : handleError.errorResponse(res, "No hay clientes cargados aún", 400, true);
+        }
+        else {
+            handleError.errorResponse(res, "Not Found", 404, true)
+        }
+    })
+
+}
