@@ -1,0 +1,19 @@
+{
+  "name": "api_motosonline",
+  "version": "1.0.0",
+  "description": "An api for the customer managment of an online motorbike shop",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Simonian Simon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.12.0-beta.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
