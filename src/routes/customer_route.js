@@ -19,5 +19,8 @@ router.post('/create', customer_service.createNewCustomer);
 // Update a customerData
 router.put('/update/:id', customer_service.updateCustomer);
 
+// INSERT A available customer credit
+router.post('/credit/insert/:customer_id', customer_service.insertAvailableCredit)
+
 
 module.exports = router;

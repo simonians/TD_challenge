@@ -15,5 +15,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonians/TD_challenge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simonians/TD_challenge/issues"
+  },
+  "homepage": "https://github.com/simonians/TD_challenge#readme"
 }
