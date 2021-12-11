@@ -6,7 +6,6 @@ const connection = mysql.createConnection({
     password: "password",
     database: "online_motorbike_shop"
 })
-
 connection.connect((e)=> {
     if(e){
         console.log(e);
