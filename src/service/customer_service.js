@@ -1,4 +1,3 @@
-// Genero la conexión con mySQL
 const mySqlConnection = require("../configurations/databaseConfiguration")
 const handleError = require("../exceptions/handleErrors")
 const utils = require("../util/customers_util")
