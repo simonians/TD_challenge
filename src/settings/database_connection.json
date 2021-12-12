@@ -1,0 +1,8 @@
+[
+    {
+        "host": "database-onlinemotorbikeshop.ct1kundv3va8.us-east-1.rds.amazonaws.com",
+        "user": "admin",
+        "password": "admin123",
+        "database": "online_motorbike_shop"
+    }
+]
