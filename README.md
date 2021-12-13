@@ -132,4 +132,18 @@ git clone https://github.com/simonians/TD_challenge.git
 ```
 cd TD_challenge
 ```
-3) 
+3) Otorgar permisos de administración
+```
+sudo su
+```
+4) Construir la imágen 
+```
+docker build -t node-api-motorbikeonline .
+```
+5) Levantar la imágen en el puerto 80
+```
+docker run -dp 80:8080 -e PORT=8080 -e HOST=0.0.0.0 node-api-motorbikeonline
+```
+Ahora, dirigirse en su navegador al endpoint: ``` http://localhost:8080/ ``` y el proyecto debería estar funcionando. Ahora puede usar la API a su gusto. 
+
+6) Además, con docker stop puede pararse la ejecución
