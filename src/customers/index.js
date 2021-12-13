@@ -4,9 +4,7 @@ const {
     createCustomer,
     deleteCustomer,
     updateCustomer,
-    get,
-    getCustomer,
-    getCustomersSorted
+    get
 } = require('./service');
 
 const url = `/customers/v1`
@@ -14,8 +12,8 @@ const url = `/customers/v1`
 // Routes: 
 
 router.get(`${url}/`, get)
-router.get(`${url}/:id`, getCustomer)
-router.get(`${url}/sort/:asc`, getCustomersSorted)
+router.get(`${url}/:id`, get)
+router.get(`${url}/sort/:sortedType`, get)
 router.post(`${url}/`, createCustomer);
 router.put(`${url}/:id`, updateCustomer);
 router.delete(`${url}/:id`, deleteCustomer); 
