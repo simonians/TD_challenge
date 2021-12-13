@@ -14,7 +14,8 @@ app.set("port", PORT);
 app.use(express.json())
 
 // Routes
-app.use(require("./routes/customer_route"))
+app.use(require("./customers"))
+app.use(require("./credits"))
 
 //Starting server
 app.listen( PORT, () => {

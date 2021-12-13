@@ -10,7 +10,9 @@
   "author": "Simonian Simon",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http-errors": "^1.8.1",
     "mysql": "^2.18.1",
     "sequelize": "^6.12.0-beta.2"
   },
