@@ -9,7 +9,7 @@ const url = `/credits/v1`
 
 // Routes: 
 
-router.post(`${url}/insert/:customer_id`, insertCredit)
+router.post(`${url}/:customer_id`, insertCredit)
 
 
 module.exports = router;

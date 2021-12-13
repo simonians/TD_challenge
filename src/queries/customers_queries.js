@@ -7,12 +7,12 @@ const customersQueries = {
     ORDER BY available_customer_credit ${type};`,
     createCustomer: (name, lastname) => `INSERT INTO customers (name,last_name) values ("${name}", "${lastname}");`,
     updateCustomer: (nameToUpdate, lastnameToUpdate, id) => {
-        if (typeof nameToUpdate !== "undefined") {
-            return `UPDATE customers SET name = "${nameToUpdate}" WHERE customers.id=${id};`
-        } else if (typeof lastnameToUpdate !== "undefined") {
+        if (nameToUpdate && lastnameToUpdate) {
+            return `UPDATE customers SET name = "${nameToUpdate}", last_name = "${lastnameToUpdate}" WHERE customers.id=${id};`
+        } else if (lastnameToUpdate) {
             return `UPDATE customers SET last_name = "${lastnameToUpdate}" WHERE customers.id=${id};`
         } else {
-            return `UPDATE customers SET name = "${nameToUpdate}", last_name = "${lastnameToUpdate}" WHERE customers.id=${id};`
+            return `UPDATE customers SET name = "${nameToUpdate}" WHERE customers.id=${id};`
         }
     },
     deleteCustomer: (id) => `DELETE FROM customers WHERE id = ${id} `
