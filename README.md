@@ -17,7 +17,7 @@ Además, los endpoints principales son: :
 - Todos los comandos aquí tipeados son válidos para una máquina con sistema operativo linux. En caso de correr el proyecto en cualquier otro sistema operativo, buscar los comandos equivalentes. 
 
 ### Requerimientos
-1) Tener instalado docker y docker-compose. 
+1) **Tener instalado docker y docker-compose.**
 - Para verificar si docker y docker-compose estaban previamente instalado, pueden ejecutarse los siguientes comandos: 
   - docker --version 
   - docker-compose --version
@@ -25,19 +25,19 @@ Además, los endpoints principales son: :
   - sudo apt install docker.io
   - sudo apt install docker-compose
 
-2) Tener instalado git previamente
+2) **Tener instalado git previamente**
 - En caso de no tenerlo previamente instalado, se recomienda la siguiente [documentación](https://www.atlassian.com/es/git/tutorials/install-git)
 
-3) Tener instalado MySQL y Workbench
+3) **Tener instalado MySQL y Workbench**
 - En caso de no tenerlos instalados, se recomienda leer la siguiente documentación:
     - [Instalación MySQL](https://dev.mysql.com/doc/refman/8.0/en/general-installation-issues.html) 
     - [Instalación WORKBENCH](https://dev.mysql.com/downloads/workbench/)
 
-4) Abrir el WORKBENCH y crear una conexión local. 
+4) Abrir el **WORKBENCH** y crear una **conexión local.** 
 
 5) Una vez que haya ingresado a su conexión local, abrir y correr el script **MotosOnlie_DataBase.sql** que se encuentra en la carpeta **database** de la ruta principal.
 
-6) Si todo salió bien, configurar los datos de la conexión a su base de datos local en el archivo **databaseConfiguration.js** que se encuentra en el siguiente path del proyecto ``` TD_challenge/src/configurations/databaseConfiguration.js ```.
+6) Si todo salió bien, configurar los datos de la conexión a su base de datos local en el archivo **databaseConfiguration.js** que se encuentra en el siguiente path del proyecto ***TD_challenge/src/configurations/databaseConfiguration.js***.
 
 7) Ya está listo para ejecutarse y comenzar a gestionar la información de los clientes en su base de datos local.
 
