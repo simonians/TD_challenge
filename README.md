@@ -1,15 +1,15 @@
 # TD_challenge
 
 El challenge consta de la creación de una API que permita la gestión de clientes para una empresa de venta de motocicletas online. 
-La API fue creada con Node.js y la base de datos gestionada con MySQL. El proyecto se esta deployado en AWS usando los servicios que otorga la versión gratuita de Amazon. La url con el proyecto deployado es la siguiente: [**http://ec2-54-152-101-167.compute-1.amazonaws.com/**]("http://ec2-54-152-101-167.compute-1.amazonaws.com/").
+La API fue creada con Node.js y la base de datos gestionada con MySQL. El proyecto se esta deployado en AWS usando los servicios que otorga la versión gratuita de Amazon. La url con el proyecto deployado es la siguiente: [```http://ec2-54-152-101-167.compute-1.amazonaws.com/```]("http://ec2-54-152-101-167.compute-1.amazonaws.com/").
 Además, los endpoints principales son: : 
-- [Obtener todos los clientes --> **GET** http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/](http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/)
-- [Obtener un cliente por id --> **GET** http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/1](http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/1)
-- [Obtener todos los clientes ordenados por su crédito disponible --> **GET** http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/sort/1](http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/sort/1)
-- [Crear un nuevo cliente --> **POST** http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/]()
-- [Insertar en un cliente un determinado crédito disponible --> **POST** http://ec2-54-152-101-167.compute-1.amazonaws.com/credit/v1/]()
-- [Eliminar un cliente --> **DELETE** http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/{id}]()
-- [Actualizar la información de un cliente --> **PUT** http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/{id}]()
+- Obtener todos los clientes --> ```GET http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/```
+- Obtener un cliente por id --> ``` GET http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/1```
+- Obtener todos los clientes ordenados por su crédito disponible --> ```GET http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/sort/1```
+- Crear un nuevo cliente --> ```POST http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/```
+- Insertar en un cliente un determinado crédito disponible --> ```POST http://ec2-54-152-101-167.compute-1.amazonaws.com/credit/v1/```
+- Eliminar un cliente --> ```DELETE http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/{id}```
+- Actualizar la información de un cliente --> ```PUT http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1/{id}```
 
 ## Correr el proyecto localmente: 
 
