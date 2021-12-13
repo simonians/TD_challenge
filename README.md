@@ -105,5 +105,31 @@ Implementación de instancias comprendidas en free-tier:
 - Dockerfile
 - Docker-compose
 
+
 ## Correr el proyecto localmente: 
 
+### Observaciones:
+"Todos los comandos aquí tipeados son válidos para una máquina con sistema operativo linux. En caso de correr el proyecto en cualquier otro sistema operativo, buscar los comandos equivalentes". 
+
+### Requerimientos
+1) Tener instalado docker y docker-compose. 
+- Para verificar si docker y docker-compose estaban previamente instalado, pueden ejecutarse los siguientes comandos: 
+  - docker --version 
+  - docker-compose --version
+- En caso de no tener previamente instalados docker y docker compose, ejecutar los siguientes comandos: 
+  - sudo apt install docker.io
+  - sudo apt install docker-compose
+
+2) Tener instalado git previamente
+- En caso de no tenerlo previamente instalado, se recomienda la siguiente [documentación](https://www.atlassian.com/es/git/tutorials/install-git)
+
+### Primer uso
+1) Clonar este repositorio. Para esto, correr el siguiente comando en la teminal de tu computadora:
+```
+git clone https://github.com/simonians/TD_challenge.git 
+```
+2) Ingresar al proyecto con el comando 
+```
+cd TD_challenge
+```
+3) 
