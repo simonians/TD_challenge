@@ -1,8 +1,14 @@
 const express = require("express");
 const app = express();
 
+
+const serverConfig = require("./configurations/serverConfiguration")
+const PORT = serverConfig.PORT;
+const HOST = serverConfig.HOST
+
+
 // Settings
-app.set("port", process.env.PORT || 8080);
+app.set("port", PORT);
 
 // Middlewares
 app.use(express.json())
@@ -11,6 +17,6 @@ app.use(express.json())
 app.use(require("./routes/customer_route"))
 
 //Starting server
-app.listen((8080), () => {
+app.listen( PORT, () => {
     console.log("Server on port ", app.get("port"))
 })

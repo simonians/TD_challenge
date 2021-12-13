@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
 const fs = require("fs");
-const mysql_data = JSON.parse(fs.readFileSync('./settingsToIgnore/database_settings.json', "utf-8"))[0];
+const mysql_data = require("../settingsToIgnore/DB_settings")
 
 const connection = mysql.createConnection({
     host: mysql_data.host,
