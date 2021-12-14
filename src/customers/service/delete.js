@@ -6,18 +6,26 @@ const queries = require("../../queries/customers_queries").customersQueries;
 const deleteCustomer = (req, res) => {
     const { id } = req.params;
     const query = queries.deleteCustomer(id);
+    console.log(query)
     utils.getCustomer(id).then(rows => {
         if (rows.length === 0) {
             handleError.errorResponse(res, `No hay ningún cliente con id ${id} en la base de datos`, 400, true);
             return;
         }
-        mySqlConnection.query(query, [id], (err, rows, fields) => {
+        mySqlConnection.query(`DELETE FROM available_credit WHERE customer_id = ${id};`, [id], (err, rows, fields) => {
             if (!err) {
-                res.status(200).json({ message: 'Customer Deleted' });
+                mySqlConnection.query(query, [id], (err, rows, fields) => {
+                    if (!err) {
+                        res.status(200).json({ message: 'Customer Deleted' });
+                    } else {
+                        handleError.errorResponse(res, "Not Found", 404, true)
+                    }
+                });
             } else {
                 handleError.errorResponse(res, "Not Found", 404, true)
             }
         });
+                
 
     })
 }
