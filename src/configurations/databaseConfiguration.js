@@ -3,6 +3,8 @@ const serverConfig = require("./serverConfiguration")
 const ENV = serverConfig.NODE_ENV;
 const {db_prod_settings, db_tests_settings} = require("../settingsToIgnore/DB_settings")
 
+console.log("Env --> " + ENV)
+
 const connection = ENV === "test" ?  
 mysql.createConnection({
     host: db_tests_settings.host,

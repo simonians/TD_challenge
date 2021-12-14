@@ -18,10 +18,12 @@ app.use(require("./customers"))
 app.use(require("./credits"))
 
 //Starting server
-app.listen(PORT, HOST)
+const server = app.listen(PORT, HOST)
 
 //Página principal
 
 app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "index.html"))
 })
+
+module.exports = {app, server};

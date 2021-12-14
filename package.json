@@ -4,8 +4,10 @@
   "description": "An api for the customer managment of an online motorbike shop",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "start": "NODE_ENV=production node src/index.js",
+    "test": "NODE_ENV=test jest --verbose --silent",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Simonian Simon",
   "license": "ISC",
@@ -17,7 +19,10 @@
     "sequelize": "^6.12.0-beta.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "http-status": "^1.5.0",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
   },
   "repository": {
     "type": "git",
