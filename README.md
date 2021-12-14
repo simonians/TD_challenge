@@ -105,5 +105,3 @@ Implementación de instancias comprendidas en free-tier:
 - Dockerfile
 - Docker-compose
 
-## Correr el proyecto localmente: 
-

@@ -1,14 +1,22 @@
 const mysql = require("mysql");
+const serverConfig = require("./serverConfiguration")
+const ENV = serverConfig.NODE_ENV;
+const {db_prod_settings, db_tests_settings} = require("../settingsToIgnore/DB_settings")
 
-const fs = require("fs");
-const mysql_data = require("../settingsToIgnore/DB_settings")
+const connection = ENV === "test" ?  
+mysql.createConnection({
+    host: db_tests_settings.host,
+    user: db_tests_settings.user,
+    password: db_tests_settings.password,
+    database: db_tests_settings.database
+}) :
+mysql.createConnection({
+    host: db_prod_settings.host,
+    user: db_prod_settings.user,
+    password: db_prod_settings.password,
+    database: db_prod_settings.database
+});
 
-const connection = mysql.createConnection({
-    host: mysql_data.host,
-    user: mysql_data.user,
-    password: mysql_data.password,
-    database: mysql_data.database
-})
 connection.connect((e)=> {
     if(e){
         console.log(e);

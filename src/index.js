@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const path = require("path")
 
 const serverConfig = require("./configurations/serverConfiguration")
 const PORT = serverConfig.PORT;
@@ -18,6 +18,10 @@ app.use(require("./customers"))
 app.use(require("./credits"))
 
 //Starting server
-app.listen( PORT, () => {
-    console.log("Server on port ", app.get("port"))
+app.listen(PORT, HOST)
+
+//Página principal
+
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "index.html"))
 })
