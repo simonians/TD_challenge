@@ -35,7 +35,7 @@ Además, los endpoints principales son: :
 
 4) Abrir el **WORKBENCH** y crear una **conexión local.** 
 
-5) Una vez que haya ingresado a su conexión local, abrir y correr el script **MotosOnlie_DataBase.sql** que se encuentra en la carpeta **database** de la ruta principal.
+5) Una vez que haya ingresado a su conexión local, abrir y correr el script **MotosOnlie_DataBase.sql** que se encuentra en la carpeta **database** de la ruta principal del proyecto.
 
 6) Si todo salió bien, configurar los datos de la conexión a su base de datos local en el archivo **databaseConfiguration.js** que se encuentra en el siguiente path del proyecto ***TD_challenge/src/configurations/databaseConfiguration.js***.
 
