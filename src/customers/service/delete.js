@@ -5,7 +5,7 @@ const queries = require("../../queries/customers_queries").customersQueries;
 
 const deleteCustomer = (req, res) => {
     const { id } = req.params;
-    const query = queries.deleteCustomer;
+    const query = queries.deleteCustomer(id);
     utils.getCustomer(id).then(rows => {
         if (rows.length === 0) {
             handleError.errorResponse(res, `No hay ningún cliente con id ${id} en la base de datos`, 400, true);

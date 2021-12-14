@@ -147,6 +147,10 @@ Ahora, dirigirse en su navegador al endpoint: ``` http://localhost:8080/ ``` y e
   - ``` Status 400 Bad Request ``` -> no hay ningún cliente con ese id en la base de datos
   - ``` Status 200 Ok ``` -> Crédito insertado de forma correcta
 
+## Postman
+- Variables de entorno configuradas: 
+    - {{ip_motorbike}} = http://ec2-54-152-101-167.compute-1.amazonaws.com/customers/v1
+    - {{ip_motorbike_credit}} = http://ec2-54-152-101-167.compute-1.amazonaws.com/credits/v1 
 
 ## Infraestructura global 
 La infraestructura fue diseñada en AWS conteniendo los principales servicios para estructura de red, servidores, almacenamiento externo, bases de datos y seguridad.

@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{localhost_motorbike}}/all",
+					"raw": "{{ip_motorbike}}/",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike}}"
 					],
 					"path": [
-						"all"
+						""
 					]
 				}
 			},
@@ -28,12 +28,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{localhost_motorbike}}/6",
+					"raw": "{{ip_motorbike}}/10",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike}}"
 					],
 					"path": [
-						"6"
+						"10"
 					]
 				}
 			},
@@ -45,13 +45,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{localhost_motorbike}}/delete/13",
+					"raw": "{{ip_motorbike}}/40",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike}}"
 					],
 					"path": [
-						"delete",
-						"13"
+						"40"
 					]
 				}
 			},
@@ -70,15 +69,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"Miguel\",\n    \"lastname\": \"Migue\"\n}"
+					"raw": "{\n    \"name\": \"Nombre del usuario de prueba\",\n    \"lastname\": \"Apellido del usuario de prueba\"\n}"
 				},
 				"url": {
-					"raw": "{{localhost_motorbike}}/create",
+					"raw": "{{ip_motorbike}}/",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike}}"
 					],
 					"path": [
-						"create"
+						""
 					]
 				}
 			},
@@ -91,7 +90,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"lastname\": \"Marq\"\n}",
+					"raw": "{\n    \"lastname\": \"apellido actualizado\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -99,13 +98,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{localhost_motorbike}}/update/6",
+					"raw": "{{ip_motorbike}}/8",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike}}"
 					],
 					"path": [
-						"update",
-						"6"
+						"8"
 					]
 				}
 			},
@@ -124,17 +122,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"available_customer_credit\": 1000\n}"
+					"raw": "{\n    \"available_customer_credit\": 3000\n}"
 				},
 				"url": {
-					"raw": "{{localhost_motorbike}}/credit/insert/6",
+					"raw": "{{ip_motorbike_credit}}/8",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike_credit}}"
 					],
 					"path": [
-						"credit",
-						"insert",
-						"6"
+						"8"
 					],
 					"query": [
 						{
@@ -153,13 +149,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{localhost_motorbike}}/all/sorted",
+					"raw": "{{ip_motorbike}}/sort/1",
 					"host": [
-						"{{localhost_motorbike}}"
+						"{{ip_motorbike}}"
 					],
 					"path": [
-						"all",
-						"sorted"
+						"sort",
+						"1"
 					]
 				}
 			},

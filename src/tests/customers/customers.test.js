@@ -69,6 +69,5 @@ test('get customer by id', async () => {
 
 
 afterAll(() =>{
-    console.log("A cerrar el server")
     server.close()
 })
